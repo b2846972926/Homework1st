@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按鈕樣式練習</title>
+    <style>
+        button {
+            background-color:white;
+            padding: 10px 20px;
+            font-size: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .text{
+            border:none;
+            color:rgb(1, 159, 232);
+        }
+        .contained{
+            color:white;
+            background-color:rgb(1, 159, 232) ;
+            border:none;
+        }
+        .outlined{
+            color:rgb(1, 159, 232);
+            border:1px solid rgb(1, 159, 232);
+        }
+        .text:hover{
+            background-color: aliceblue;
+        }
+        .contained:hover{
+            opacity:0.8 ;
+        }
+        .outlined:hover{
+            background-color: rgb(174, 210, 242);
+            border:1px solid rgb(234, 125, 24);
+        }
+    </style>
+</head>
+<body>
+    <button class="text">TEXT</button>
+    <button class="contained">CONTAINED</button>
+    <button class="outlined">OUTLINED</button>
+</body>
+</html>

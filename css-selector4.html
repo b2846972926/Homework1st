@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輸入框動畫效果練習</title>
+    <style>
+        .input-field{
+            position:relative;
+        }
+        .input-field input{
+            width: 300px;
+            height:60px;
+            border-radius: 5px;
+        }
+        .input-field label{
+            position:absolute;
+            top:20px;
+            left:8px;
+            color:gray;
+        }
+        input:focus ~ label{
+            top: -10px;;
+            left: 10px;
+            padding:3px;
+            background-color: white;
+            font-size:50%;
+            color:aqua;
+        }
+        input:focus{
+            border-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-field">
+        <input type="text"></input>
+        <label>Outlined</label>
+    </div>
+</body>
+</html>

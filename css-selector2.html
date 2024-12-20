@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>偽類選擇器練習</title>
+    <style>
+        .border:focus {
+            outline-color: blue;
+        }
+        button:hover {
+            background-color: rgb(188, 186, 186);
+        }
+        input:checked + span {
+            color:green;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>作業3</h1>
+    <input class="border" type="text" placeholder="請輸入內容">
+    <button>送出</button>
+    <input type="checkbox">
+    <span>我是男生</span>
+</body>
+</html>

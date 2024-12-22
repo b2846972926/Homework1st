@@ -27,19 +27,45 @@
         }
         .text:hover{
             background-color: aliceblue;
+            transition: 1s;
+        }
+        .text:disabled{
+            background-color: rgb(255, 255, 255);
+            color:rgb(196, 195, 195);
+            cursor: auto;
+            
         }
         .contained:hover{
             opacity:0.8 ;
+            transition: 1s;
         }
+        .contained:disabled{
+            background-color: rgb(237, 237, 237);
+            opacity:1;
+            color:rgb(195, 195, 194);
+            cursor: auto;
+        }
+
         .outlined:hover{
             background-color: rgb(174, 210, 242);
             border:1px solid rgb(234, 125, 24);
+            transition: 1s;
+        }
+        .outlined:disabled{
+            background-color: rgb(255, 255, 255);
+            border:1px solid rgb(237, 237, 237);
+            color:rgb(211, 211, 211);
+            cursor: auto;
         }
     </style>
 </head>
 <body>
     <button class="text">TEXT</button>
+    <button class="text" disabled>TEXT</button>
     <button class="contained">CONTAINED</button>
+    <button class="contained" disabled>CONTAINED</button>
     <button class="outlined">OUTLINED</button>
+    <button class="outlined" disabled>OUTLINED</button>
+    
 </body>
 </html>

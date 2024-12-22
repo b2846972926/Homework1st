@@ -5,35 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>輸入框動畫效果練習</title>
     <style>
-        .input-field{
+        *{
+            box-sizing: border-box;
+            transition: 1.3s;
+        }
+        .outside{
             position:relative;
         }
-        .input-field input{
+        .outside input{
             width: 300px;
             height:60px;
             border-radius: 5px;
+            border:2px solid gray;
         }
-        .input-field label{
+        .outside label{
             position:absolute;
-            top:20px;
+            top:50%;
+            transform: translateY(-50%);
             left:8px;
             color:gray;
         }
-        input:focus ~ label{
-            top: -10px;;
+        input:focus + label{
+            top:0px;
             left: 10px;
-            padding:3px;
+            padding:2px;
             background-color: white;
-            font-size:50%;
-            color:aqua;
+            font-size:10px;
+            color:rgb(0, 138, 184);
+
         }
         input:focus{
-            border-color: aqua;
+            outline: none;
+            border:2px solid rgb(0, 138, 184);
         }
     </style>
 </head>
 <body>
-    <div class="input-field">
+    <div class="outside">
         <input type="text"></input>
         <label>Outlined</label>
     </div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        .css_table{
+
+            
+        }
+        .css_tr{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .css_td{
+            border: 1px solid black;
+            padding:12px;
+            text-align: center; 
+        }
+        .css_tr:first-child .css_td:first-child{
+            border-top-left-radius: 5px;
+        }
+        .css_tr:first-child .css_td:last-child{
+            border-top-right-radius: 5px;
+        }
+        .css_tr:last-child .css_td:first-child{
+            border-bottom-left-radius: 5px;
+        }
+        .css_tr:last-child .css_td:last-child{
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="css_table">
+        <div class="css_tr">
+            <div class="css_td">1</div>
+            <div class="css_td">2</div>
+            <div class="css_td">3</div>
+        </div>
+        <div class="css_tr">
+            <div class="css_td">4</div>
+            <div class="css_td">5</div>
+            <div class="css_td">6</div>
+        </div>
+        <div class="css_tr">
+            <div class="css_td">7</div>
+            <div class="css_td">8</div>
+            <div class="css_td">9</div>
+        </div>
+    </div>
+   
+    
+
+
+</body>
+</html>

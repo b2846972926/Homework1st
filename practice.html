@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Example Using DIV + CSS</title>
+    <style>/* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        
+        /* Card container */
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px;
+        }
+        
+        /* Avatar section */
+        .avatar {
+            width: 50px;
+            height: 50px;
+            background-color: #6200ea; /* Main theme color */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 24px;
+            margin: 10px;
+        }
+        
+        .avatar span {
+            font-weight: bold;
+        }
+        
+        /* Content section with title and date */
+        .content {
+            padding: 10px;
+        }
+        
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            font-size: 12px;
+            color: #888;
+        }
+        
+        /* Image and description section */
+        .image-section {
+            margin-top: 10px;
+        }
+        
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .description {
+            padding: 15px;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+        </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Social Media Article Card</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="card">
+            <!-- Left section with avatar -->
+            <div class="avatar">
+                <span>A</span> <!-- Placeholder for the avatar letter -->
+            </div>
+    
+            <!-- Right section with title and date -->
+            <div class="content">
+                <h2 class="title">Article Title Goes Here</h2>
+                <p class="date">December 24, 2024</p>
+            </div>
+    
+            <!-- Bottom section with image and description -->
+            <div class="image-section">
+                <img src="https://via.placeholder.com/600x400" alt="Article Image">
+                <p class="description">This is a brief description of the article content. It's an overview of what this article is about.</p>
+            </div>
+        </div>
+    </body>
+</body>
+</html>

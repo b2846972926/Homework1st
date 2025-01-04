@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .dropdown{
+            width: 140px;
+            border:1px solid rgb(255, 255, 255);
+            box-shadow: 0 0 4px rgb(68, 68, 75);
+            position: relative;
+            
+        }
+        .dropdown::after{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            transform: translateY(-50%) rotate(45deg);
+            /* Y-50% */
+            top : 0;
+            right:14px;
+            /* 會蓋住背景 */
+            
+        }
+        i{
+            font-size: 10px;
+            
+        }
+        .dropdown-content div{
+            padding: 4px;
+            font-size: 12px;
+        }
+        .dropdown-content div span{
+            margin-left: 8px;
+        }
+        .dropdown-content div:hover{
+            background-color: antiquewhite;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <div class="dropdown-content">
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span> 
+            </div>
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <span>My account</span>   
+            </div>
+            <hr/>
+            <div>
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Add another account</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span> 
+            </div>
+            <div>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Log out</span> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

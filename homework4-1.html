@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+        }
+        .slider{
+            background-color: rgb(129, 128, 128);
+            width: 56px;
+            height: 20px;
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            
+        }
+        .slider::before{
+            content: "";
+            width: 26px;
+            height: 26px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            border-radius: 100px;
+            box-shadow: inset 0 2px 5px rgb(213, 212, 212);
+            transition: all 0.3s;
+        }
+        #switch{
+            display: none;
+        }
+        input:checked + .slider{
+            background-color: rgb(111, 197, 240);
+        }
+        input:checked + .slider::before{
+            background-color: rgb(14, 184, 246);
+            /* position: absolute; */
+            /* top: 50%; */
+            transform: translate(30px,-50%);
+            /* right: 0; 直接往右做絕對定位但不行*/
+            box-shadow: inset 0 2px 5px rgb(29, 123, 230);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="switch">
+        <label for="switch" class="slider"></label>
+    </div>
+</body>
+</html>

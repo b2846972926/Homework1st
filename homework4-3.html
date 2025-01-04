@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色 */
+            z-index: 999; /* 確保它在所有內容上面 */
+        }
+        .modal{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            z-index: 1000; /* 確保它在遮罩層上面 */
+            width: 300px;
+        }
+        .modal-top{
+            display: flex;
+            position: relative;
+            border-bottom: 1px solid rgb(179, 177, 177);
+            padding: 8px;
+            font-weight: bold;
+        }
+        .btn-x{
+            width: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            cursor: pointer;
+        }
+        .modal-main{
+            padding: 8px;
+            border-bottom: 1px solid rgb(179, 177, 177);
+        }
+        .modal-footer{
+            text-align: end;
+            color:rgb(99, 170, 246);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+
+    </div>
+    <div class="modal">
+        <div class="modal-top">
+            <div>Modal title</div>
+            <div class="btn-x">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+        </div>
+        <div class="modal-main">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae hic ea ab similique autem quidem velit saepe veniam reprehenderit earum sit quo odit perferendis, ad ipsam a quaerat quod eveniet?
+        </div>
+        <div class="modal-footer">
+            SAVE CHANGES
+        </div>
+    </div>
+</body>
+</html>

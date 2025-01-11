@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+        }
+        .item{
+            border:1px solid rgb(195, 195, 195);
+            padding: 10px;
+            background-color: rgb(237, 237, 237);
+        }
+        .content1,.content2,.content3 {
+            background-color: white;
+            display: none;
+        }
+        .arrow{
+            display: inline-block;
+        }
+        .item:hover{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">
+            <span class="arrow arrow1">></span>
+            <span>Collapsible Group Item #1</span>
+        </div>
+        <div class="item content1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
+        <div class="item item2">
+            <span class="arrow arrow2">></span>
+            <span>Collapsible Group Item #2</span>
+        </div>
+        <div class="item content2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
+        <div class="item item3">
+            <span class="arrow arrow3">></span>
+            <span>Collapsible Group Item #3</span>
+        </div>
+        <div class="item content3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
+    </div>
+    <script>
+        let showContent1 = document.querySelector(".item.content1");
+        let showContent2 = document.querySelector(".item.content2");
+        let showContent3 = document.querySelector(".item.content3");
+        let item1 = document.querySelector(".item.item1");
+        let item2 = document.querySelector(".item.item2");
+        let item3 = document.querySelector(".item.item3");
+        let arrow1 = document.querySelector(".arrow1");
+        let arrow2 = document.querySelector(".arrow2");
+        let arrow3 = document.querySelector(".arrow3");
+
+        item1.addEventListener("click",function(){
+            showContent1.style.display = "block" ;
+            arrow1.style.transform = "rotate(90deg)";
+            showContent2.style.display = "none" ;
+            showContent3.style.display = "none" ;
+            arrow2.style.transform = "none";
+            arrow3.style.transform = "none";
+        })
+        item2.addEventListener("click",function(){
+            showContent2.style.display = "block" ;
+            arrow2.style.transform = "rotate(90deg)";
+            showContent1.style.display = "none" ;
+            showContent3.style.display = "none" ;
+            arrow1.style.transform = "none";
+            arrow3.style.transform = "none";
+        })
+        item3.addEventListener("click",function(){
+            showContent3.style.display = "block" ;
+            arrow3.style.transform = "rotate(90deg)";
+            showContent2.style.display = "none" ;
+            showContent1.style.display = "none" ;
+            arrow1.style.transform = "none";
+            arrow2.style.transform = "none";
+        })
+    </script>
+
+
+</body>
+</html>

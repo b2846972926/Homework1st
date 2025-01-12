@@ -8,9 +8,27 @@
 <body>
     <script>
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
-        console.log(data.length);
         
+        // const result= {}
 
+        // for(let i=0;i<data.length;i++){
+        //     // data[i];
+        //     let aa = data[i];
+        //     if (result.hasOwnProperty(aa)){
+        //         result[aa] = result[aa] +1
+        //     }
+        //     else{
+        //         result[aa] = 1;
+        //     }
+
+        // }
+        // console.log(result);
+
+
+        const count = data.reduce((acc,cur)=>{
+            acc[cur] = (acc[cur] || 0) + 1;
+            return acc;
+        },{});
 
     </script>
 </body>

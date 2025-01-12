@@ -33,12 +33,19 @@
             display: flex;
             justify-content: center;
         }
+        input{
+            padding-left: 8px;
+            border-radius: 10px;
+            border-style: solid;
+        }
         .add-btn{
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         cursor: pointer;
         margin-left: 10px;
+        border:none;
+        font-size: 24px;
         }
     
     </style>
@@ -47,10 +54,12 @@
     <div class="todo-container">
         <h1>To do list</h1>
         <div class="input-block">
-            <input type="text" id newTodo placeholder="新增代辦事項...">
+            <input type="text" id="newTodo" placeholder="新增代辦事項...">
             <button class="add-btn">+</button>
         </div>
-        <ul></ul>
+        <ul>
+            <li></li>
+        </ul>
     </div>
 
 </body>

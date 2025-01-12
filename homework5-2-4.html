@@ -30,7 +30,9 @@
         'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
         ];
 
-        const totalYears = inventors.reduce((total,life) => total + (life.passed-life.year) ,0 );
+        const totalYears = inventors.reduce((total,life)=> {
+            return total + (life.passed-life.year)
+         },0);
         console.log(totalYears);
         
 

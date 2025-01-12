@@ -30,11 +30,22 @@
         'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
         ];
 
-
-        const splitPeople = people.split(",");
+        
+        const splitPeople = people.map(person=> person.split(", "))
+        splitPeople.sort((x,y)=>{
+            console.log(x[1],y[1],x[1]>y[1]);
+            if (x[1]>y[1]){
+                return 1;
+            }
+            else {
+                return -1 ;
+            }
+        });
         console.log(splitPeople);
         
         
+        // const name = people.sort();
+        // console.log(name);
 
 
     </script>

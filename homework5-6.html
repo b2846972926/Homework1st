@@ -13,12 +13,21 @@
             padding: 10px;
             background-color: rgb(237, 237, 237);
         }
-        .content1,.content2,.content3 {
+        .content{
+            padding: 10px;
             background-color: white;
+            border:1px solid rgb(195, 195, 195);
             display: none;
         }
+
         .arrow{
             display: inline-block;
+        }
+        .arrow-transform{
+            transform: rotate(90deg);
+        }
+        .show-content{
+            display:block;
         }
         .item:hover{
             cursor: pointer;
@@ -28,57 +37,105 @@
 </head>
 <body>
     <div class="container">
-        <div class="item item1">
+        <div class="item item1" data-item="1">
             <span class="arrow arrow1">></span>
             <span>Collapsible Group Item #1</span>
         </div>
-        <div class="item content1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
-        <div class="item item2">
+        <div class="content content1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
+        <div class="item item2" data-item="2">
             <span class="arrow arrow2">></span>
             <span>Collapsible Group Item #2</span>
         </div>
-        <div class="item content2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
-        <div class="item item3">
+        <div class="content content2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
+        <div class="item item3" data-item="3">
             <span class="arrow arrow3">></span>
             <span>Collapsible Group Item #3</span>
         </div>
-        <div class="item content3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
+        <div class="content content3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis. Placeat temporibus eos, aperiam error quos, fugiat natus sunt ad quia minima delectus consequatur nostrum illum! Quis suscipit possimus ipsam.</div>
     </div>
     <script>
-        let showContent1 = document.querySelector(".item.content1");
-        let showContent2 = document.querySelector(".item.content2");
-        let showContent3 = document.querySelector(".item.content3");
-        let item1 = document.querySelector(".item.item1");
-        let item2 = document.querySelector(".item.item2");
-        let item3 = document.querySelector(".item.item3");
-        let arrow1 = document.querySelector(".arrow1");
-        let arrow2 = document.querySelector(".arrow2");
-        let arrow3 = document.querySelector(".arrow3");
+        const container = document.querySelector(".container");
+        container.addEventListener("click",event=>{
+            // console.log(event.target.dataset.content);
+            if(event.target.closest(".item")){
+                const contentList = document.querySelectorAll(".content");
+                contentList.forEach(content=>{
+                    content.classList.remove("show-content");
+                })
+                // console.log(event.target.dataset.item);
+                let content = document.querySelector(`.content${event.target.closest(".item").dataset.item}`)
+                content.classList.add("show-content");
+                event.target.closest(".item").querySelector(".arrow").classList.toggle("arrow-transform");
+            }
+        })
+        // const container = document.querySelector(".container");
+        // let currentItem = null;
+        // container.addEventListener("click",event=>{
+        //     if(currentItem!==null){
+        //         currentItem.classList.remove(".show-content")
+        //     }
+        //     if(event.target.classList.contains("item")){
+        //         currentItem = event.target;
+        //         currentItem.classList.add(".show-content")
+        //     }
+        //     else{
+        //         currentItem=null;
+        //     }
+        // });
 
-        item1.addEventListener("click",function(){
-            showContent1.style.display = "block" ;
-            arrow1.style.transform = "rotate(90deg)";
-            showContent2.style.display = "none" ;
-            showContent3.style.display = "none" ;
-            arrow2.style.transform = "none";
-            arrow3.style.transform = "none";
-        })
-        item2.addEventListener("click",function(){
-            showContent2.style.display = "block" ;
-            arrow2.style.transform = "rotate(90deg)";
-            showContent1.style.display = "none" ;
-            showContent3.style.display = "none" ;
-            arrow1.style.transform = "none";
-            arrow3.style.transform = "none";
-        })
-        item3.addEventListener("click",function(){
-            showContent3.style.display = "block" ;
-            arrow3.style.transform = "rotate(90deg)";
-            showContent2.style.display = "none" ;
-            showContent1.style.display = "none" ;
-            arrow1.style.transform = "none";
-            arrow2.style.transform = "none";
-        })
+        // console.log(currentItem);
+
+        
+
+
+
+        // container.addEventListener("click",(event)=>{
+        //     if(event.target.classList.contains("item")){
+        //         const itemList = [...document.querySelectorAll(".item")]
+        //         itemList.forEach(item => {
+        //             item.classList.remove("")
+        //         })
+        //     }
+        // })
+
+
+
+
+
+        // let showContent1 = document.querySelector(".content.content1");
+        // let showContent2 = document.querySelector(".content.content2");
+        // let showContent3 = document.querySelector(".content.content3");
+        // let item1 = document.querySelector(".item.item1");
+        // let item2 = document.querySelector(".item.item2");
+        // let item3 = document.querySelector(".item.item3");
+        // let arrow1 = document.querySelector(".arrow1");
+        // let arrow2 = document.querySelector(".arrow2");
+        // let arrow3 = document.querySelector(".arrow3");
+
+        // item1.addEventListener("click",function(){
+        //     showContent1.classList.add("show-content");
+        //     showContent2.classList.remove("show-content");
+        //     showContent3.classList.remove("show-content");
+        //     arrow1.classList.add("arrow-transform");
+        //     arrow3.classList.remove("arrow-transform");
+        //     arrow2.classList.remove("arrow-transform");
+        // })
+        // item2.addEventListener("click",function(){
+        //     showContent2.classList.add("show-content");
+        //     showContent1.classList.remove("show-content");
+        //     showContent3.classList.remove("show-content");
+        //     arrow2.classList.add("arrow-transform");
+        //     arrow1.classList.remove("arrow-transform");
+        //     arrow3.classList.remove("arrow-transform");
+        // })
+        // item3.addEventListener("click",function(){
+        //     showContent3.classList.add("show-content");
+        //     showContent2.classList.remove("show-content");
+        //     showContent1.classList.remove("show-content");
+        //     arrow3.classList.add("arrow-transform");
+        //     arrow1.classList.remove("arrow-transform");
+        //     arrow2.classList.remove("arrow-transform");
+        // })
     </script>
 
 
